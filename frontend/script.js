@@ -22,10 +22,19 @@ form.addEventListener('submit', (e) => {
 
 
 // Optional: Debounce search input for better performance
+// let debounceTimer;
+// searchInput.addEventListener('input', () => {
+//     clearTimeout(debounceTimer);
+//     debounceTimer = setTimeout(searchProducts, 500); // Wait 500ms after user stops typing
+// });
 let debounceTimer;
 searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+
+    if (!query) return; // 🚀 empty input पर API call मत करो
+
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(searchProducts, 500); // Wait 500ms after user stops typing
+    debounceTimer = setTimeout(searchProducts, 500);
 });
 
 // Main search function
