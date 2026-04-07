@@ -306,6 +306,12 @@ button:hover {
     gap: 0.5rem;
 }
 
+.pagination-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color);
+}
+
 .pagination-btn:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary-color);

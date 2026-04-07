@@ -60,8 +60,8 @@ async function searchProducts() {
 
     const queryString = params.toString();
     const apiUrl = queryString
-      ? `${API_BASE_URL}${API_ENDPOINT}?${queryString}`
-      : `${API_BASE_URL}${API_ENDPOINT}`;
+        ? `${API_BASE_URL}${API_ENDPOINT}?${queryString}`
+        : `${API_BASE_URL}${API_ENDPOINT}`;
 
     // Clear previous error messages
     errorDisplay.textContent = '';
@@ -105,7 +105,7 @@ function displayResults(data) {
     resultsContainer.innerHTML = '';
 
     // Check if data is empty or no results
-    if (!data || data.length === 0)  {
+    if (!data || data.length === 0) {
         resultsContainer.innerHTML = `
             <div class="empty-state">
                 <h3>No results found</h3>
@@ -148,12 +148,30 @@ function renderPagination(pagination) {
 
     if (!pagination || pagination.totalPages <= 1) return;
 
-    for (let i = 1; i <= pagination.totalPages; i++) {
+    // Create Previous button
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = 'Previous';
+    prevBtn.className = 'pagination-btn';
+    prevBtn.disabled = pagination.currentPage <= 1;
+    prevBtn.addEventListener('click', () => {
+        if (pagination.currentPage > 1) {
+            currentPage = pagination.currentPage - 1;
+            searchProducts();
+        }
+    });
+    container.appendChild(prevBtn);
+
+    // Create page number buttons (show max 5 pages around current page)
+    const startPage = Math.max(1, pagination.currentPage - 2);
+    const endPage = Math.min(pagination.totalPages, pagination.currentPage + 2);
+
+    for (let i = startPage; i <= endPage; i++) {
         const btn = document.createElement('button');
         btn.textContent = i;
+        btn.className = 'pagination-btn';
 
         if (i === pagination.currentPage) {
-            btn.style.fontWeight = 'bold';
+            btn.classList.add('active');
         }
 
         btn.addEventListener('click', () => {
@@ -163,6 +181,19 @@ function renderPagination(pagination) {
 
         container.appendChild(btn);
     }
+
+    // Create Next button
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = 'Next';
+    nextBtn.className = 'pagination-btn';
+    nextBtn.disabled = pagination.currentPage >= pagination.totalPages;
+    nextBtn.addEventListener('click', () => {
+        if (pagination.currentPage < pagination.totalPages) {
+            currentPage = pagination.currentPage + 1;
+            searchProducts();
+        }
+    });
+    container.appendChild(nextBtn);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
