@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "productName": "Office Chair",
+    "category": "Furniture",
+    "price": 120.00,
+    "supplier": "ABC Traders"
+  },
+  {
+    "id": 2,
+    "productName": "Standing Desk",
+    "category": "Furniture",
+    "price": 350.00,
+    "supplier": "ErgoWorks"
+  },
+  {
+    "id": 3,
+    "productName": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 25.50,
+    "supplier": "TechGear"
+  },
+  {
+    "id": 4,
+    "productName": "Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 85.00,
+    "supplier": "KeyCo"
+  },
+  {
+    "id": 5,
+    "productName": "LED Desk Lamp",
+    "category": "Home Office",
+    "price": 45.99,
+    "supplier": "BrightLife"
+  },
+  {
+    "id": 6,
+    "productName": "Notebook Pack",
+    "category": "Stationery",
+    "price": 12.00,
+    "supplier": "PaperWorld"
+  },
+  {
+    "id": 7,
+    "productName": "Fountain Pen",
+    "category": "Stationery",
+    "price": 55.00,
+    "supplier": "LuxeWriting"
+  },
+  {
+    "id": 8,
+    "productName": "Monitor Stand",
+    "category": "Furniture",
+    "price": 60.00,
+    "supplier": "ErgoWorks"
+  },
+  {
+    "id": 9,
+    "productName": "USB-C Hub",
+    "category": "Electronics",
+    "price": 40.00,
+    "supplier": "TechGear"
+  },
+  {
+    "id": 10,
+    "productName": "Ergonomic Backrest",
+    "category": "Furniture",
+    "price": 35.00,
+    "supplier": "ABC Traders"
+  },
+  {
+    "id": 11,
+    "productName": "Noise Cancelling Headphones",
+    "category": "Electronics",
+    "price": 199.99,
+    "supplier": "AudioPro"
+  },
+  {
+    "id": 12,
+    "productName": "Wireless Charger",
+    "category": "Electronics",
+    "price": 30.00,
+    "supplier": "PowerUp"
+  },
+  {
+    "id": 13,
+    "productName": "File Organizer",
+    "category": "Stationery",
+    "price": 18.50,
+    "supplier": "OrganizeDaily"
+  },
+  {
+    "id": 14,
+    "productName": "External SSD 1TB",
+    "category": "Electronics",
+    "price": 145.00,
+    "supplier": "StorageSolutions"
+  },
+  {
+    "id": 15,
+    "productName": "Drafting Table",
+    "category": "Furniture",
+    "price": 420.00,
+    "supplier": "ArtisanEquip"
+  },
+  {
+    "id": 16,
+    "productName": "Gaming Chair",
+    "category": "Furniture",
+    "price": 220.00,
+    "supplier": "GameZone"
+  },
+  {
+    "id": 17,
+    "productName": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 75.00,
+    "supplier": "SoundWave"
+  },
+  {
+    "id": 18,
+    "productName": "Desk Organizer Tray",
+    "category": "Stationery",
+    "price": 20.00,
+    "supplier": "OrganizeDaily"
+  },
+  {
+    "id": 19,
+    "productName": "Smart LED Bulb",
+    "category": "Home Office",
+    "price": 28.00,
+    "supplier": "BrightLife"
+  },
+  {
+    "id": 20,
+    "productName": "Laptop Cooling Pad",
+    "category": "Electronics",
+    "price": 32.50,
+    "supplier": "CoolTech"
+  },
+  {
+    "id": 21,
+    "productName": "Whiteboard",
+    "category": "Office Supplies",
+    "price": 65.00,
+    "supplier": "EduTools"
+  },
+  {
+    "id": 22,
+    "productName": "Marker Pen Set",
+    "category": "Stationery",
+    "price": 15.00,
+    "supplier": "PaperWorld"
+  },
+  {
+    "id": 23,
+    "productName": "Portable Projector",
+    "category": "Electronics",
+    "price": 250.00,
+    "supplier": "VisionTech"
+  },
+  {
+    "id": 24,
+    "productName": "Adjustable Laptop Stand",
+    "category": "Furniture",
+    "price": 48.00,
+    "supplier": "ErgoWorks"
+  },
+  {
+    "id": 25,
+    "productName": "Desk Mat",
+    "category": "Home Office",
+    "price": 22.00,
+    "supplier": "ComfortDesk"
+  },
+  {
+    "id": 26,
+    "productName": "Ethernet Cable",
+    "category": "Electronics",
+    "price": 10.00,
+    "supplier": "NetConnect"
+  },
+  {
+    "id": 27,
+    "productName": "Stapler Machine",
+    "category": "Stationery",
+    "price": 14.50,
+    "supplier": "OfficeBasics"
+  },
+  {
+    "id": 28,
+    "productName": "Desk Fan",
+    "category": "Home Office",
+    "price": 35.00,
+    "supplier": "CoolAir"
+  },
+  {
+    "id": 29,
+    "productName": "Graphic Tablet",
+    "category": "Electronics",
+    "price": 180.00,
+    "supplier": "DesignPro"
+  },
+  {
+    "id": 30,
+    "productName": "Bookshelf",
+    "category": "Furniture",
+    "price": 150.00,
+    "supplier": "HomeCraft"
+  }
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeerostock | Inventory Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Zeero<span>stock</span></h1>
+            <p class="tagline">Find the surplus inventory you need, instantly.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section card">
+            <form id="search-form">
+                <div class="search-row">
+                    <div class="input-group">
+                        <label for="q">Search Products</label>
+                        <input type="text" id="q" placeholder="e.g. Office Chair, Mouse..." autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="All">All Categories</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Home Office">Home Office</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Office Supplies">Office Supplies</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search-row">
+                    <div class="input-group">
+                        <label for="minPrice">Min Price ($)</label>
+                        <input type="number" id="minPrice" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="maxPrice">Max Price ($)</label>
+                        <input type="number" id="maxPrice" placeholder="1000">
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" id="search-btn">Find Inventory</button>
+                    </div>
+                </div>
+                <div id="error-message" class="error-text"></div>
+            </form>
+        </section>
+
+        <section id="results-section">
+            <div id="results-header" class="results-meta" style="display: none;">
+                <h2 id="results-count">Showing 0 products</h2>
+            </div>
+            <div id="results-container" class="table-wrapper">
+                <!-- Results Table will be injected here -->
+                <div class="empty-state">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <h3>Start searching for products</h3>
+                    <p>Use the filters above to find matching inventory items from our suppliers.</p>
+                </div>
+            </div>
+            <div id="pagination-container" class="pagination-container"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
