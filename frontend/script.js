@@ -38,7 +38,12 @@ async function searchProducts() {
     if (maxPrice) params.append('maxPrice', maxPrice);
 
     // Build the full API URL
-    const apiUrl = `${API_BASE_URL}${API_ENDPOINT}?${params.toString()}`;
+    // const apiUrl = `${API_BASE_URL}${API_ENDPOINT}?${params.toString()}`;
+
+    const queryString = params.toString();
+    const apiUrl = queryString
+      ? `${API_BASE_URL}${API_ENDPOINT}?${queryString}`
+      : `${API_BASE_URL}${API_ENDPOINT}`;
 
     // Clear previous error messages
     errorDisplay.textContent = '';
