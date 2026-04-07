@@ -60,7 +60,8 @@ async function searchProducts() {
         const data = await response.json();
 
         // Pass data to display function
-        displayResults(data);
+        // displayResults(data);
+        displayResults(data.data);
 
     } catch (error) {
         // Handle errors and show in UI
@@ -80,7 +81,7 @@ function displayResults(data) {
     resultsContainer.innerHTML = '';
 
     // Check if data is empty or no results
-    if (!data || data.length === 0) {
+    if (!data || data.length === 0)  {
         resultsContainer.innerHTML = `
             <div class="empty-state">
                 <h3>No results found</h3>
