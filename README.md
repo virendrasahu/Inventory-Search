@@ -68,6 +68,10 @@ inventory-search-project/
 │   ├── server.js
 │   └── package.json
 ├── frontend/
+│   ├── img/
+│   │   ├── initialPage.jpg
+│   │   ├── FilterApplied.jpg
+│   │   └── pegination.jpg
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
@@ -179,29 +183,23 @@ http://localhost:3000/search?q=chair
 
 ## 🖼️ Screenshots
 
-### 🔍 Search UI
+### 🔍 Initial Search Page
 
-(Add screenshot here)
+![Initial Search Page](frontend/img/initialPage.jpg)
 
-```
-/screenshots/search-ui.png
-```
+*The main search interface with filter options for product name, category, and price range.*
 
-### 📊 Results Display
+### 📊 Search Results with Filters
 
-(Add screenshot here)
+![Search Results](frontend/img/FilterApplied.jpg)
 
-```
-/screenshots/results.png
-```
+*Search results displayed in a table format with applied filters and pagination controls.*
 
-### ❌ No Results State
+### 📄 Pagination Feature
 
-(Add screenshot here)
+![Pagination](frontend/img/pegination.jpg)
 
-```
-/screenshots/no-results.png
-```
+*Pagination controls showing Previous/Next buttons and page numbers for easy navigation.*
 
 ---
 
