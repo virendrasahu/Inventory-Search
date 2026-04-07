@@ -11,6 +11,7 @@ const searchBtn = document.getElementById('search-btn');
 const resultsContainer = document.getElementById('results-container');
 const errorDisplay = document.getElementById('error-message');
 
+let currentPage = 1;
 // Add event listener to search button
 // searchBtn.addEventListener('click', searchProducts);
 const form = document.getElementById('search-form');
@@ -52,6 +53,7 @@ async function searchProducts() {
     if (category && category !== 'All') params.append('category', category);
     if (minPrice) params.append('minPrice', minPrice);
     if (maxPrice) params.append('maxPrice', maxPrice);
+    params.append('page', currentPage);
 
     // Build the full API URL
     // const apiUrl = `${API_BASE_URL}${API_ENDPOINT}?${params.toString()}`;
@@ -83,6 +85,7 @@ async function searchProducts() {
         // Pass data to display function
         // displayResults(data);
         displayResults(data.data);
+        renderPagination(data.pagination);
 
     } catch (error) {
         // Handle errors and show in UI
@@ -139,3 +142,29 @@ function displayResults(data) {
 
     resultsContainer.appendChild(table);
 }
+function renderPagination(pagination) {
+    const container = document.getElementById('pagination-container');
+    container.innerHTML = '';
+
+    if (!pagination || pagination.totalPages <= 1) return;
+
+    for (let i = 1; i <= pagination.totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+
+        if (i === pagination.currentPage) {
+            btn.style.fontWeight = 'bold';
+        }
+
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            searchProducts();
+        });
+
+        container.appendChild(btn);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    searchProducts();
+});
