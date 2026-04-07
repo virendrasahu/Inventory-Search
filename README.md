@@ -1,5 +1,4 @@
 ---
-
 # 📦 Inventory Search API + UI
 
 ## 📌 Overview
