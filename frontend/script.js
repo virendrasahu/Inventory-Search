@@ -12,7 +12,14 @@ const resultsContainer = document.getElementById('results-container');
 const errorDisplay = document.getElementById('error-message');
 
 // Add event listener to search button
-searchBtn.addEventListener('click', searchProducts);
+// searchBtn.addEventListener('click', searchProducts);
+const form = document.getElementById('search-form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); // 
+    searchProducts();
+});
+
 
 // Optional: Debounce search input for better performance
 let debounceTimer;
